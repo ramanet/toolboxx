@@ -1,3 +1,4 @@
+## (ro) versus (rw)
 Das ist eigentlich genau der Standardfall bei GitHub:
 	•	Wenn du ein öffentliches Repo anlegst, kann jeder den Code ansehen und klonen (downloaden).
 	•	Schreiben (commits, pushen) kann aber nur, wer Schreibrechte im Repo hat – also du selbst (und evtl. Leute, die du als Collaborator einlädst).
