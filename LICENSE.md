@@ -11,8 +11,6 @@ software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 ## ChatGPT zur Lzenzerteilung:
 
-Kurz und trocken:
-
 Wenn du keine Lizenz dazulegst, dann heißt das nach GitHub-Standards: alle Rechte vorbehalten. Das bedeutet: niemand darf deinen Code legal weiterverwenden, kopieren oder verändern, außer GitHub selbst für die Bereitstellung. Damit schließt du unbeabsichtigt andere eher aus.
 
 Eine Lizenz ist nicht für dich, sondern für die anderen Nutzer da. Sie klärt, ob sie das Skript frei verwenden, anpassen oder in eigene Projekte einbauen dürfen.
