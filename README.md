@@ -1,6 +1,6 @@
 # Kleine Skripte
 
-Dies ist eine Sammlung kleiner Hilfsskripte, erstellt mit Unterstützung von KI (ChatGPT).  
+Dies ist eine Sammlung kleiner Hilfsskripte, erstellt mit Unterstützung von KI (ChatGPT, DeepSeek und Andere).  
 Sie sind als freie Beispiele gedacht – ohne Anspruch auf Originalität oder Support.  
 Mit den richtigen Prompts kann jeder dieselben Skripte generieren.  
 
