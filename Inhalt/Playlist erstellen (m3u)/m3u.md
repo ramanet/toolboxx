@@ -11,9 +11,7 @@
 - hier: ('Genesis', 'Phil Collins') und erzeugt die Playlist 'Genellins.m3u' im Playlists-Ordner.
 - Automatisiert die Playlist-Erstellung für diese Musikordner.
 
-**cd /home/user/music/Rock**
-
-### create_mombinde_m3u.sh
+### create_combined_m3u.sh
 ```bash
 #!/usr/bin/env bash
 #=============================================================================
@@ -87,7 +85,7 @@ echo "Playlist erstellt: $OUT_FILE"
 echo "Enthält $(grep -c '^#EXTINF' "$OUT_FILE" || true) Titel."
 exit 0
 ```
-### do_create_combined.sh
+### do_create_combined_m3u.sh
 ```bash
 #!/bin/bash
 #
