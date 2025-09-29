@@ -1,6 +1,9 @@
-#!/bin/bash
-#
+## BASH text-coloring.sh
 
+- Dieses Skript zeigt verschiedene Textfarben im Terminal mithilfe von ANSI-Farbsequenzen.
+- Es dient als Beispiel und Referenz für farbige Ausgaben in Bash-Skripten.
+
+```bash
 echo -e "This is\033[1;31m red \033[0mtext"
 echo -e "This is\033[1;32m green \033[0mtext"
 echo -e "This is\033[1;33m yellow \033[0mtext"
@@ -16,4 +19,4 @@ echo -e "This is\033[1;94m light blue \033[0mtext"
 echo -e "This is\033[1;95m light magenta \033[0mtext"
 echo -e "This is\033[1;96m light cyan \033[0mtext"
 echo -e "This is\033[1;97m white \033[0mtext"
-
+```
