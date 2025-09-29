@@ -3,7 +3,7 @@
 # Dieses Skript zeigt eine Menüoberfläche zum Ausführen und Bearbeiten von
 # Bash-Skripten im angegebenen Verzeichnis.
 #
-misc.sh
+# misc.sh
 #
 # ===== KONFIGURATION =====
 BASE_DIR="/mnt/misc"
