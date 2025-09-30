@@ -12,8 +12,8 @@ docker service create --name bookshelf \
   --env PGID=1000 \
   --env TZ=Europe/Berlin \
   --publish 13378:80 \
-  --mount type=bind,src=/mnt/<nfsshare>/swarm/bookshelf/config,dst=/config \
-  --mount type=bind,src=/mnt/<nfsshare>/books,dst=/books \
+  --mount type=bind,src=/<nfsshare>/swarm/bookshelf/config,dst=/config \
+  --mount type=bind,src=/<nfsshare>/books,dst=/books \
   --network swarm \
   --replicas 1 \
   --restart-condition any \

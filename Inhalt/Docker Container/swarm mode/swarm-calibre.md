@@ -11,8 +11,8 @@ services:
       - PGID=1000
       - TZ=Europe/Berlin
     volumes:
-      - /mnt/4000GB/swarm/calibre/config:/config
-      - /mnt/4000GB/data/sda/server/Calibre-Bibliothek:/books
+      - /<nfsshare>/swarm/calibre/config:/config
+      - /<nfsshare>/data/sda/server/Calibre-Bibliothek:/books
     ports:
       - 8083:8083 
     networks:

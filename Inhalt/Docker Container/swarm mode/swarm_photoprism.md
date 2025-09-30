@@ -1,4 +1,4 @@
-## copilot sagt: /mnt/4000GB/data/sda/server/menus/gully/misc/compose/swarm: docker stack deploy -c swarm_photoprism.md photoprism
+## copilot sagt: <nfsshare>/data/sda/server/menus/gully/misc/compose/swarm: docker stack deploy -c swarm_photoprism.md photoprism
 
 version: "3.0"
 services:
@@ -14,11 +14,11 @@ services:
     ports:
       - 2342:2342
     volumes:
-      - /mnt/4000GB/data/sda/clients/Bilder:/photoprism/originals
-      - /mnt/4000GB/swarm/photoprism/config:/photoprism/config
-      - /mnt/4000GB/swarm/photoprism/cache:/photoprism/cache
-      - /mnt/4000GB/swarm/photoprism/import:/photoprism/import
-      - /mnt/4000GB/swarm/photoprism/export:/photoprism/export
+      - /<nfsshare>/data/sda/clients/Bilder:/photoprism/originals
+      - /<nfsshare>/swarm/photoprism/config:/photoprism/config
+      - /<nfsshare>/swarm/photoprism/cache:/photoprism/cache
+      - /<nfsshare>/swarm/photoprism/import:/photoprism/import
+      - /<nfsshare>/swarm/photoprism/export:/photoprism/export
     networks:
       - swarm
     deploy:

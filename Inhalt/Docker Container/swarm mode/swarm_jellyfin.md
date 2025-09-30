@@ -12,9 +12,9 @@ docker service create --name jellyfin \
   --env PGID=1000 \
   --env TZ=Europe/Berlin \
   --publish 8097:8096 \
-  --mount type=bind,src=/mnt/<nfsshare>/swarm/jellyfin/config,dst=/config \
-  --mount type=bind,src=/mnt/<nfsshare>/music,dst=/music \
-  --mount type=bind,src=/mnt/<nfsshare>/books,dst=/books \
+  --mount type=bind,src=/<nfsshare>/swarm/jellyfin/config,dst=/config \
+  --mount type=bind,src=/<nfsshare>/music,dst=/music \
+  --mount type=bind,src=/<nfsshare>/books,dst=/books \
   --network swarm \
   --replicas 1 \
   --restart-condition any \

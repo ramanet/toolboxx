@@ -12,8 +12,8 @@ docker service create --name navidrome \
   --env PGID=1000 \
   --env TZ=Europe/Berlin \
   --publish 4533:4533 \
-  --mount type=bind,src=/mnt/<nfsshare>/swarm/navidrome/data,dst=/data \
-  --mount type=bind,src=/mnt/<nfsshare>/music,dst=/music \
+  --mount type=bind,src=/<nfsshare>/swarm/navidrome/data,dst=/data \
+  --mount type=bind,src=/<nfsshare>/music,dst=/music \
   --network swarm \
   --replicas 1 \
   --restart-condition any \

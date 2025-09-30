@@ -14,8 +14,8 @@ docker service create --name vscode \
   --network swarm \
   --replicas 1 \
   --restart-condition any \
-  --mount type=bind,src=/mnt/<nfsshare>/swarm/vscode/config,dst=/config \
-  --mount type=bind,src=/mnt/<nfsshare>/<repository>,dst=/repo \
+  --mount type=bind,src=/<nfsshare>/swarm/vscode/config,dst=/config \
+  --mount type=bind,src=/<nfsshare>/<repository>,dst=/repo \
   --publish 8443:8443 \
   lscr.io/linuxserver/code-server:latest
 ```

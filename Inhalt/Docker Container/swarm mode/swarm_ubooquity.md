@@ -11,9 +11,9 @@ services:
       - PGID=1000
       - TZ=Europe/Berlin
     volumes:
-      - /mnt/4000GB/swarm/ubooquity/config:/config
-      - /mnt/4000GB/data/sda/clients/ebooks/calibreExp-epub:/ubooks
-      - /mnt/4000GB/data/sda/clients/Texte:/material
+      - /<nfsshare>/swarm/ubooquity/config:/config
+      - /<nfsshare>/data/sda/clients/ebooks/calibreExp-epub:/ubooks
+      - /<nfsshare>/data/sda/clients/Texte:/material
     ports:
       - 2202:2202
       - 2203:2203

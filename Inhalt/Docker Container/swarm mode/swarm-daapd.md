@@ -12,8 +12,8 @@ docker service create --name daapd \
   --env PGID=1000 \
   --env TZ=Europe/Berlin \
   --publish 3689:3689 \
-  --mount type=bind,src=/mnt/4000GB/swarm/daapd/config,dst=/config \
-  --mount type=bind,src=/mnt/4000GB/data/sda/clients/music,dst=/music \
+  --mount type=bind,src=/<nfsshare>/swarm/daapd/config,dst=/config \
+  --mount type=bind,src=/<nfsshare>/data/sda/clients/music,dst=/music \
   --network swarm \
   --replicas 1 \
   --restart-condition any \

@@ -12,9 +12,9 @@ docker service create --name emby \
   --env PGID=1000 \
   --env TZ=Europe/Berlin \
   --publish 8096:8096 \
-  --mount type=bind,src=/mnt/<nfsshare>/swarm/emby/config,dst=/config \
-  --mount type=bind,src=/mnt/<nfsshare>/music,dst=/music \
-  --mount type=bind,src=/mnt/<nfsshare>/video,dst=/video \
+  --mount type=bind,src=/<nfsshare>/swarm/emby/config,dst=/config \
+  --mount type=bind,src=/<nfsshare>/music,dst=/music \
+  --mount type=bind,src=/<nfsshare>/video,dst=/video \
   --network swarm \
   --replicas 1 \
   --restart-condition any \

@@ -14,7 +14,7 @@ docker service create --name hass  \
   --network swarm \
   --replicas 1 \
   --restart-condition any \
-  --mount type=bind,src=/mnt/<nfsshare>/swarm/hass/config,dst=/config \
+  --mount type=bind,src=/<nfsshare>/swarm/hass/config,dst=/config \
   --mount type=bind,src=/run/dbus,dst=/run/dbus \
   --publish 8123:8123 \
   ghcr.io/home-assistant/home-assistant:stable

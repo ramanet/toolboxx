@@ -14,7 +14,7 @@ docker service create --name kuma \
   --network swarm \
   --replicas 1 \
   --restart-condition any \
-  --mount type=bind,src=/mnt/<nfsshare>/swarm/kuma/data,dst=/app/data \
+  --mount type=bind,src=/<nfsshare>/swarm/kuma/data,dst=/app/data \
   --publish 3001:3001 \
 louislam/uptime-kuma:1
 ```
