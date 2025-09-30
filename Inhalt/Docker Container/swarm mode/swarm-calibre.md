@@ -1,6 +1,6 @@
 ## portainer create stack (as service) import
 - stack (service) mit portainer erstellen
-  ```yaml
+```yaml
 version: "3.6"
 services:
   calibre-web:
@@ -25,4 +25,4 @@ services:
 networks:
   swarm:
     external: true
-    ```
+```

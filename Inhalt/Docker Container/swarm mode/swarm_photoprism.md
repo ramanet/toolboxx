@@ -1,5 +1,5 @@
 ## copilot sagt: <nfsshare>/data/sda/server/menus/gully/misc/compose/swarm: docker stack deploy -c swarm_photoprism.md photoprism
-
+```yaml
 version: "3.0"
 services:
   photoprism:
@@ -29,3 +29,4 @@ services:
 networks:
   swarm:
     external: true
+```
