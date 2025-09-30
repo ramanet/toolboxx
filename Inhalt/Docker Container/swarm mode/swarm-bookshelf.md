@@ -1,6 +1,10 @@
 ## docker swarm audiobookshelf
 
-- Auf swarm manager zuerst das network dann den service erstellen, für Books und volume für config, beides auf NFS Share.- Das NFS Share muß auf allen nodes des warm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
+- Auf swarm manager zuerst das network dann den service erstellen, für Books und volume für config, beides auf NFS Share.
+- Das NFS Share muß auf allen nodes des swarm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
+```bash
+docker network create --driver overlay --attachable swarm
+```
 ```bash
 docker service create --name bookshelf \
   --hostname booksshelf \

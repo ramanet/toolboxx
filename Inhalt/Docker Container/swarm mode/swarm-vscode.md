@@ -1,7 +1,7 @@
 ## docker swarm Visual Studio Code
 
 - Auf swarm manager zuerst das network dann den service erstellen, Daten und volume für config, beides NFS Shares.
-- Das NFS Share muß auf allen nodes des warm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
+- Das NFS Share muß auf allen nodes des swarm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
 ```bash
 docker service create --name vscode \
   --hostname vscode \

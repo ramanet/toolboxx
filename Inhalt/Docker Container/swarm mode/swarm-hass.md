@@ -1,7 +1,10 @@
 ## docker swarm home-assistant
 
 - Auf swarm manager zuerst das network dann den service erstellen, mit volume für config, auf NFS Share.
-- Das NFS Share muß auf allen nodes des warm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
+- Das NFS Share muß auf allen nodes des swarm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
+```bash
+docker network create --driver overlay --attachable swarm
+```
 ```bash
 docker service create --name hass  \
   --hostname hass \
