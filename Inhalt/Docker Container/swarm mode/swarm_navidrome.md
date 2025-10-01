@@ -1,8 +1,9 @@
-## docker swarm navidrome
+### docker swarm navidrome
 
 - Auf swarm manager zuerst das network dann den service erstellen, für Musik und volume für data, beides beides NFS Share.
 - Das NFS Share muß auf allen nodes des swarm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
 ```bash
+(if not exist):
 docker network create --driver overlay --attachable swarm
 ```
 ```bash
@@ -12,8 +13,8 @@ docker service create --name navidrome \
   --env PGID=1000 \
   --env TZ=Europe/Berlin \
   --publish 4533:4533 \
-  --mount type=bind,src=/<nfsshare>/swarm/navidrome/data,dst=/data \
-  --mount type=bind,src=/<nfsshare>/music,dst=/music \
+  --mount type=bind,src=/mnt/<nfsshare>/swarm/navidrome/data,dst=/data \
+  --mount type=bind,src=/mnt/<nfsshare>/music,dst=/music \
   --network swarm \
   --replicas 1 \
   --restart-condition any \

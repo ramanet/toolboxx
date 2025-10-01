@@ -1,4 +1,11 @@
-## copilot: docker stack deploy -c swarm_photoprism.md photoprism
+### docker swarm navidrome
+
+- Auf swarm manager zuerst das network dann den service erstellen, für Musik und volume für data, beides beides NFS Share.
+- Das NFS Share muß auf allen nodes des swarm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
+```bash
+(if not exist):
+docker network create --driver overlay --attachable swarm
+```
 ```yaml
 version: "3.0"
 services:
@@ -14,17 +21,18 @@ services:
     ports:
       - 2342:2342
     volumes:
-      - /<nfsshare>/data/sda/clients/Bilder:/photoprism/originals
-      - /<nfsshare>/swarm/photoprism/config:/photoprism/config
-      - /<nfsshare>/swarm/photoprism/cache:/photoprism/cache
-      - /<nfsshare>/swarm/photoprism/import:/photoprism/import
-      - /<nfsshare>/swarm/photoprism/export:/photoprism/export
+      - /mnt/<nfsshare>/swarm/photoprism/storage:/photoprism/storage:rw
+      - /mnt/<nfsshare>/data/sda/clients/Bilder:/photoprism/originals:rw
     networks:
       - swarm
     deploy:
       replicas: 1
       restart_policy:
         condition: any
+
+networks:
+  swarm:
+    external: true
 
 networks:
   swarm:

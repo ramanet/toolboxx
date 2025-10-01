@@ -1,5 +1,9 @@
-## portainer create stack (as service) import
+### docker swarm calibre-web
 - stack (service) mit portainer erstellen
+```bash
+(if not exist):
+docker network create --driver overlay --attachable swarm
+```
 ```yaml
 version: "3.6"
 services:
@@ -11,8 +15,8 @@ services:
       - PGID=1000
       - TZ=Europe/Berlin
     volumes:
-      - /<nfsshare>/swarm/calibre/config:/config
-      - /<nfsshare>/data/sda/server/Calibre-Bibliothek:/books
+      - /mnt/<nfsshare>/swarm/calibre/config:/config
+      - /mnt/<nfsshare>/data/sda/server/Calibre-Bibliothek:/books
     ports:
       - 8083:8083 
     networks:

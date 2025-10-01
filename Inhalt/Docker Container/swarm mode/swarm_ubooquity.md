@@ -1,6 +1,13 @@
 
-## portainer create stack (as service) import
-  ```yaml
+### docker swarm ubooquity
+
+- Auf swarm manager zuerst das network dann den service erstellen, für Musik und volume für data, beides beides NFS Share.
+- Das NFS Share muß auf allen nodes des swarm, manager sowie worker, in gleicher Weise unter dem selben Pfad angebunden sein. 
+```bash
+(if not exist):
+docker network create --driver overlay --attachable swarm
+```
+```yaml
 version: "3.6"
 services:
   ubooquity:
@@ -11,9 +18,9 @@ services:
       - PGID=1000
       - TZ=Europe/Berlin
     volumes:
-      - /<nfsshare>/swarm/ubooquity/config:/config
-      - /<nfsshare>/data/sda/clients/ebooks/calibreExp-epub:/ubooks
-      - /<nfsshare>/data/sda/clients/Texte:/material
+      - /mnt/<nfsshare>/swarm/ubooquity/config:/config
+      - /mnt/<nfsshare>/data/sda/clients/ebooks/calibreExp-epub:/ubooks
+      - /mnt/<nfsshare>/data/sda/clients/Texte:/material
     ports:
       - 2202:2202
       - 2203:2203
